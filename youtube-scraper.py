@@ -57,14 +57,14 @@ def download_video(url, output_path="./downloads", quality="best", audio_only=Fa
             print(f"{worker_info} Duration: {duration // 60}:{duration % 60:02d}")
             
             ydl.download([url])
-            print(f"{worker_info} ✓ Completed: {title}")
+            print(f"{worker_info} [OK] Completed: {title}")
             
             return (url, True, None)
             
     except Exception as e:
         error_msg = str(e)
         worker_info = f"[Worker {worker_id}]" if worker_id else "[Main]"
-        print(f"{worker_info} ✗ Failed: {url} - {error_msg}")
+        print(f"{worker_info} [FAIL] Failed: {url} - {error_msg}")
         return (url, False, error_msg)
 
 
@@ -76,9 +76,10 @@ def read_urls_from_file(file_path):
         file_path (str): Path to the text file containing URLs
     
     Returns:
-        list: List of valid YouTube URLs
+        list: List of valid YouTube URLs (deduplicated)
     """
     urls = []
+    seen_urls = set()
     
     try:
         with open(file_path, 'r', encoding='utf-8') as file:
@@ -89,7 +90,11 @@ def read_urls_from_file(file_path):
                     continue
                 
                 if line.startswith(('https://www.youtube.com/', 'https://youtu.be/', 'https://youtube.com/')):
-                    urls.append(line)
+                    if line not in seen_urls:
+                        urls.append(line)
+                        seen_urls.add(line)
+                    else:
+                        print(f"Warning: Line {line_num} contains duplicate URL (skipped): {line}")
                 else:
                     print(f"Warning: Line {line_num} is not a valid YouTube URL: {line}")
     
