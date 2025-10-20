@@ -1,0 +1,17 @@
+# Example YouTube URLs for youtube-scraper.py
+# Lines starting with # are comments and will be ignored
+# Empty lines are also ignored
+# I recommend writing your own URL in a new text file, this one is just for example.
+
+# Popular educational videos
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+https://www.youtube.com/watch?v=jNQXAC9IVRw
+https://www.youtube.com/watch?v=9bZkp7q19f0
+
+# Short videos for testing
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+https://www.youtube.com/watch?v=jNQXAC9IVRw
+
+# You can add more URLs here, one per line
+# https://www.youtube.com/watch?v=VIDEO_ID_HERE
+# https://youtu.be/VIDEO_ID_HERE
