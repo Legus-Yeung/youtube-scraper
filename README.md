@@ -4,7 +4,7 @@ A collection of Python scripts for downloading YouTube videos with different app
 
 ## 📁 Files Overview
 
-- **`simple-youtube-downloader.py`** - Single video downloader with command-line interface
+- **`simple-youtube-scraper.py`** - Single video downloader with command-line interface
 - **`youtube-scraper.py`** - Concurrent batch downloader that reads URLs from a text file
 - **`example_urls.txt`** - Example text file with YouTube URLs for batch downloading
 - **`requirements.txt`** - Python dependencies
@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ### Single Video Download
 
 ```bash
-python simple-youtube-downloader.py "https://www.youtube.com/watch?v=VIDEO_ID"
+python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID"
 ```
 
 ### Batch Download
@@ -57,7 +57,7 @@ sudo apt install ffmpeg
 
 ## 🔧 Script Details
 
-### simple-youtube-downloader.py
+### simple-youtube-scraper.py
 
 A single-threaded YouTube video downloader with comprehensive options.
 
@@ -72,19 +72,19 @@ A single-threaded YouTube video downloader with comprehensive options.
 
 ```bash
 # Basic download
-python simple-youtube-downloader.py "https://www.youtube.com/watch?v=VIDEO_ID"
+python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID"
 
 # Download with specific quality
-python simple-youtube-downloader.py "https://www.youtube.com/watch?v=VIDEO_ID" --quality 720p
+python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID" --quality 720p
 
 # Audio-only download
-python simple-youtube-downloader.py "https://www.youtube.com/watch?v=VIDEO_ID" --audio-only
+python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID" --audio-only
 
 # Custom output directory
-python simple-youtube-downloader.py "https://www.youtube.com/watch?v=VIDEO_ID" --output ./my_videos
+python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID" --output ./my_videos
 
 # List available formats
-python simple-youtube-downloader.py "https://www.youtube.com/watch?v=VIDEO_ID" --list-formats
+python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID" --list-formats
 ```
 
 #### Command Line Options

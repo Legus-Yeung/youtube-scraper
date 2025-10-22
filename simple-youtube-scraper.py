@@ -67,10 +67,10 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python youtube_downloader.py "https://www.youtube.com/watch?v=VIDEO_ID"
-  python youtube_downloader.py "https://www.youtube.com/watch?v=VIDEO_ID" --quality 720p
-  python youtube_downloader.py "https://www.youtube.com/watch?v=VIDEO_ID" --audio-only
-  python youtube_downloader.py "https://www.youtube.com/watch?v=VIDEO_ID" --output ./my_videos
+  python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID"
+  python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID" --quality 720p
+  python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID" --audio-only
+  python simple-youtube-scraper.py "https://www.youtube.com/watch?v=VIDEO_ID" --output ./my_videos
         """
     )
     
