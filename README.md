@@ -1,4 +1,4 @@
-# YouTube Downloader Scripts
+# YouTube Scraper Scripts
 
 A collection of Python scripts for downloading YouTube videos with different approaches - single video downloads and concurrent batch downloads.
 
